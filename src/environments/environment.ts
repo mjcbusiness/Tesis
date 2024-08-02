@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://api.mercadolibre.com/sites/MLA/search?nickname=dehuka',
+  token: 'APP_USR-714919120455516-073020-eaa4cee4e9221762399b3f1ac7ae270d-162555727'
 };
 
 /*

@@ -1,0 +1,65 @@
+.dashboard{
+    width: 100%;
+    margin: 0;
+    background-color: rgb(18, 18, 18);
+    height: 92vh;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.content-page{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(18, 18, 18);
+}
+.button{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 55px;
+}
+.info-cards{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.info-card{
+    width: 33%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(18, 18, 18);
+}
+.tabla-metrica{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 55px;
+    padding-bottom: 30px;
+}
+.label-metrica{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-bottom: 30px;
+}
+.card-metricas{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.card-metrica{
+    padding-right: 40px;
+    background-color: rgb(18, 18, 18);
+}

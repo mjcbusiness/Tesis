@@ -1,0 +1,42 @@
+<div class="custom-card">
+    <div class="card-body" style="color: white;">
+      <h5 class="card-title">{{infoCard.seller.nickname}}</h5>
+      <img class="card-img" src="../../../../assets/zapas.jpg">
+      <h6 class="card-text">Información de tu tienda</h6>
+      <div class="item-calification">
+        <div class="item-description">
+          <h6 class="card-text">Ventas realizadas</h6>
+        </div>
+        <div class="stars">
+          {{infoCard.seller.seller_reputation.transactions.total}}
+        </div>
+      </div>
+      <div class="item-calification">
+        <div class="item-description">
+          <h6 class="card-text">Calificación</h6>
+        </div>
+        <div class="stars" *ngFor="let i of starsArray">
+          <i class="fa fa-star custom-active-star"></i>
+        </div>
+      </div>
+      <div class="item-calification">
+        <div class="item-description">
+          <h6 class="card-text">Atención</h6>
+        </div>
+        <div class="stars" *ngFor="let i of starsArray">
+          <i class="fa fa-star custom-active-star"></i>
+        </div>
+      </div>
+      <div class="item-calification">
+        <div class="item-description">
+          <h6 class="card-text">Despacho</h6>
+        </div>
+        <div class="stars" *ngFor="let i of starsArray">
+          <i class="fa fa-star custom-active-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="custom-footer">
+      <a (click)="viewInfoCard()">Ver Información</a>
+    </div>
+  </div>

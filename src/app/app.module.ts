@@ -1,18 +1,52 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { NgChartsModule } from 'ng2-charts';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './shared/components/dashboard/dashboard.component';
+import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { LoginComponent } from './users/login/login.component';
+import { ButtonMainComponent } from './shared/buttons/button-main/button-main.component';
+import { CardShopComponent } from './shared/cards/card-shop/card-shop.component';
+import { TablaPublicidadComponent } from './shared/tables/tabla-publicidad/tabla-publicidad.component';
+import { TablaMetricaComponent } from './shared/tables/tabla-metrica/tabla-metrica.component';
+import { CardInfoPuntualComponent } from './shared/cards/card-info-puntual/card-info-puntual.component';
+import { CardMetricasComponent } from './shared/cards/card-metricas/card-metricas.component';
+import { InicioComponent } from './shared/components/inicio/inicio.component';
+import { DropdownComponent } from './shared/components/dropdown/dropdown.component';
+import { ButtonLogoComponent } from './shared/buttons/button-logo/button-logo.component';
+import { AuthService } from './users/services/auth.service';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    SidebarComponent,
+    NavbarComponent,
+    LoginComponent,
+    ButtonMainComponent,
+    CardShopComponent,
+    TablaPublicidadComponent,
+    TablaMetricaComponent,
+    CardInfoPuntualComponent,
+    CardMetricasComponent,
+    InicioComponent,
+    DropdownComponent,
+    ButtonLogoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgChartsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,14 @@
+/* sidebar.component.css */
+.sidebar {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button-sidebar{
+  padding-bottom: 20px;
+}

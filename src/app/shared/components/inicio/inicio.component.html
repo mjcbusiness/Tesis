@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="content-page">
+    <div class="label-user">
+        <h5>Hola Usuario</h5>
+    </div>
+    <div class="cards" *ngIf="shops?.dataShops?.length">
+        <div class="card" *ngFor="let card of shops.dataShops">
+            <app-card-shop [infoCard]="card"
+                           [calification]="getCalification(card.seller.seller_reputation.level_id)">
+
+            </app-card-shop>
+        </div>
+    </div>
+    <div *ngIf="!shops?.dataShops?.length">
+        <p>No hay tiendas disponibles.</p>
+    </div>
+</div>

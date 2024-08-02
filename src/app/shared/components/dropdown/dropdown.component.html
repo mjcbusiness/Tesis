@@ -1,0 +1,16 @@
+<div *ngIf="isOpen" class="dropdown-content">
+    <div class="dropdown-body">
+        <h6>Cuentas</h6>
+        <div class="item-shop" *ngFor="let item of shops.dataShops">
+            <i class="fa-regular fa-user"></i>
+            <label (click)="viewInfoCard(item.seller.nickname)">{{item.seller.nickname}}</label>
+        </div>
+    </div>
+    <div class="separator"></div>
+    <div class="dropdown-footer">
+        <div class="item-shop">
+            <i></i>
+            <label></label>
+        </div>
+    </div>
+</div>

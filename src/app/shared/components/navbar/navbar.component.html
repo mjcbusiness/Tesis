@@ -1,0 +1,10 @@
+<div class="navbar">
+  <div class="dropdown-container">
+    <div class="dropdown-button">
+      <app-button-logo (buttonClick)="toggleDropdown()"></app-button-logo>
+    </div>
+    <div *ngIf="isDropdownOpen" class="dropdown-menu">
+      <app-dropdown [isOpen]="isDropdownOpen"></app-dropdown>
+    </div>
+  </div>
+</div>

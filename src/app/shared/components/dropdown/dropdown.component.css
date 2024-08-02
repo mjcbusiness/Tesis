@@ -1,0 +1,85 @@
+.dropdown-content{
+    width: 275px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgb(24,24,27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dropdown-body{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24,24,27);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.dropdown-footer{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(24,24,27);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.item-shop{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+}
+.separator {
+    width: 80%; /* Ajusta el ancho del separador según sea necesario */
+    border-top: 1px solid rgb(42,42,47); /* Establece el grosor y color del borde */
+    margin: 2px 0; /* Agrega margen superior e inferior para espaciado */
+  }
+
+  h6{
+    width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: white;
+  }
+
+  i{
+    color: rgb(226,226,227);
+    font-size: 18px;
+    width: 20px;
+    height: 15px;
+  }
+
+  label{
+    color: rgb(226,226,227);
+    font-size: 14px;
+    margin-left: 10px;
+    
+  }
+
+  .item-shop:hover {
+    background-color:#00c3ff;
+    color: black; /* Cambia el color del texto cuando se pasa el ratón */
+  }
+  .item-shop i {
+    
+    transition: color 0.1s; /* Suaviza el cambio de color del ícono */
+  }
+
+  label:hover {
+    background-color:#00c3ff;
+    color: black; /* Cambia el color del texto cuando se pasa el ratón */
+  }
+  
+  .item-shop:hover i {
+    color: black; /* Cambia el color del ícono cuando se pasa el ratón */
+  }

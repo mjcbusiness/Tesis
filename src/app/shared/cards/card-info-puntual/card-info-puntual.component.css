@@ -1,0 +1,22 @@
+.card{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 95%;
+    height: 80px;
+    background-color: rgb(24, 24, 27);
+    border-radius: 15px;
+    padding-left: 15px;
+}
+.card-parametro{
+    padding: 2px;
+    color: rgb(224, 224, 222);
+    font-size: 12px;
+
+}
+.parametro-valor{
+    padding: 2px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}

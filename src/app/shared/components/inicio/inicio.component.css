@@ -1,0 +1,27 @@
+.header{
+    margin: 0;
+    background-color:rgb(24, 24, 27);
+    height: 75px;
+}
+.content-page{
+    margin: 0;
+    background-color: rgb(18, 18, 18);
+    height: 93vh;
+    border-top: 5px solid rgb(14, 14, 14);
+}
+.label-user{
+    height: 75px;
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.cards{
+    padding: 20px;
+    display: flex;
+    
+}
+.card{
+    background-color: rgb(18, 18, 18);
+    padding-left: 30px;
+    border: none;
+}

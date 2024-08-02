@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component,ViewChild  } from '@angular/core';
+import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tesis';
+  @ViewChild(SidebarComponent)
+  sidebar: SidebarComponent = new SidebarComponent;
+
+  handleSidebarToggle() {
+    this.sidebar.toggleSidebar();
+  }
 }
