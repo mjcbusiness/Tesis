@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="search-and-button">
+        <input type="text" id="searchInput" placeholder="Buscar..." (input)="onSearch($event)" />
+        <button id="addButton" (click)="onAdd()">Agregar seguimiento</button>
+    </div>
+    <table class="custom-table">
+        <thead class="custom-header">
+          <tr>
+            <th scope="col" class="first-column">Fecha</th>
+            <th scope="col">Reputacion</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="custom-body">
+          <tr *ngFor="let item of tablaSeguimientoData">
+            <td class="first-column">{{item.fecha}}</td>
+            <td>{{item.reputacion}}</td>
+            <td class="acciones">
+                <i class="fa-regular fa-eye"></i> <i class="fa-solid fa-trash-can"></i> <i class="fa-solid fa-download"></i>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</div>

@@ -33,24 +33,17 @@ export class LoginComponent {
     console.log('onSubmit llamado');
     
     if (this.authService.validateUser(this.formulario.value.email, this.formulario.value.password)) {
-      // Usuario validado exitosamente
-      // this.userService.getUserData().subscribe({ 
-      //   next: (data) => {
-      //     // Aquí manejas los datos recibidos
-      //     console.log(data);
-      //     this.userData = data;
-      //   },
-      //   error: (error) => {
-      //     // Aquí manejas los errores
-      //     console.error('Error fetching data', error);
-      //   }
-      // }
-      // );
       console.log('Inicio de sesión exitoso!');
-      this.router.navigate(['inicio']);
+      var user=this.getUserFromEmail(this.formulario.value.email);
+      this.router.navigate([`/inicio/${user}`]);
     } else {
       // Usuario no válido
       this.errorMessage = 'Correo electrónico o contraseña incorrectos.';
     }
+  }
+  getUserFromEmail(value: string): string {
+    if (!value) return value; // Si el valor está vacío o nulo, devolverlo tal cual
+    const atIndex = value.indexOf('@');
+    return atIndex !== -1 ? value.substring(0, atIndex) : value;
   }
 }

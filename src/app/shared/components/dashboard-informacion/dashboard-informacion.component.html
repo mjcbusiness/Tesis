@@ -1,0 +1,80 @@
+<!-- <app-navbar></app-navbar>
+<app-sidebar style="width:75%; position:fixed"></app-sidebar>
+<div class="dashboard">
+    <ng-container *ngIf="flagFechasEspeciales" >
+        <app-card-evento style="width: 350px; margin-right: 50px; margin-top: 100px;" *ngFor="let e of eventos"
+                         [urlImagen]="e.urlImagenEvento"
+                         [nombreEvento]="e.fechaEvento">
+        </app-card-evento>
+    </ng-container>
+    <ng-container *ngIf="flagSeguimiento" >
+        <app-tabla-seguimiento [tablaSeguimientoData]="seguimiento"></app-tabla-seguimiento>
+    </ng-container>
+    <ng-container *ngIf="flagRoadMap" >
+        <div class="roadmap-content">
+            <label><h3>Proceso  de diagnóstico</h3></label>
+            <label><h4>SKUs Publicados</h4></label>
+
+            <label><h3>Publicaciones</h3></label>
+            <div class="publicaciones" *ngFor="let p of publicaciones">
+                <label>{{p.nombrePublicacion}}</label>
+                <div>{{p.valor}}</div>
+            </div>
+
+
+
+        </div>
+    </ng-container>
+</div> -->
+<app-navbar></app-navbar>
+<app-sidebar class="sidebar"></app-sidebar>
+
+<div class="dashboard">
+  <ng-container *ngIf="flagFechasEspeciales">
+    <div class="card-container">
+      <app-card-evento 
+        *ngFor="let e of eventos" 
+        [urlImagen]="e.urlImagenEvento"
+        [nombreEvento]="e.fechaEvento"
+        class="card-evento">
+      </app-card-evento>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="flagSeguimiento">
+    <app-tabla-seguimiento [tablaSeguimientoData]="seguimiento"></app-tabla-seguimiento>
+  </ng-container>
+
+  <ng-container *ngIf="flagRoadMap">
+    <div class="roadmap-content">
+      <h3>Proceso de diagnóstico</h3>
+      <h4>SKUs Publicados</h4>
+
+      <h3 class="titulo-publicacion">Publicaciones</h3>
+      <div class="publicaciones" *ngFor="let p of publicaciones">
+        <div class="publicacion-nombre">{{ p.nombre }}</div>
+        <div class="publicacion-valor">{{ p.valor }}</div>
+      </div>
+
+      <h3 class="titulo-publicacion">Capacidad Operativa</h3>
+      <div class="publicaciones" *ngFor="let p of capacidadOperativa">
+        <div class="publicacion-nombre">{{ p.nombre }}</div>
+        <div class="publicacion-valor">{{ p.valor }}</div>
+      </div>
+
+      <h3 class="titulo-publicacion">Tiempo de respuesta (TMR)</h3>
+      <div class="publicaciones" *ngFor="let p of tiemposDeRespuetas">
+        <div class="publicacion-nombre">{{ p.nombre }}</div>
+        <div class="publicacion-valor">{{ p.valor }}</div>
+      </div>
+
+      <h3 class="titulo-publicacion">Flujo de compra</h3>
+      <div class="publicaciones" *ngFor="let p of flujoDeCompra">
+        <div class="publicacion-nombre">{{ p.nombre }}</div>
+        <div class="publicacion-valor">{{ p.valor }}</div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+

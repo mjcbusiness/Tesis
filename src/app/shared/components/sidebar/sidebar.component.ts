@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComunicacionService } from '../services/comunicacion.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,13 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private comunicacionService: ComunicacionService) {}
   ngOnInit(): void {
+    
   }
-  isActive = false;
 
-  toggleSidebar() {
-    this.isActive = !this.isActive;
+  seleccionarOpcion(opcion: string) {
+    this.comunicacionService.seleccionarOpcion(opcion);
   }
 }

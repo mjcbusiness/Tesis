@@ -1,14 +1,31 @@
 /* sidebar.component.css */
 .sidebar {
-    height: 70vh;
-    width: 100%;
+    height: 92vh;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    margin-top: 50px;
+    background-color: rgb(24,24,27);
 }
 
 .button-sidebar{
   padding-bottom: 20px;
+}
+
+label{
+  margin-bottom: 30px;
+  color: white;
+  font-size: 22px;
+}
+img{
+  margin-bottom: 30px;
+
+}
+
+.logo-sidebar{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }

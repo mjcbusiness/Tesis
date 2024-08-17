@@ -1,0 +1,21 @@
+.graficos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+.dona-chart{
+    display: flex;
+    width: 15%;
+    height: 10%;
+}
+.linea-chart{
+    display: flex;
+    width: 20%;
+    height: 10%;
+}
+.barra-chart{
+    display: flex;
+    width: 30%;
+    height: 10%;
+}

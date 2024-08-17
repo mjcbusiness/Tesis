@@ -11,7 +11,7 @@ export class CardShopComponent implements OnInit {
   
   @Input() infoCard!:ApiResponse;
   @Input() calification:number|undefined;
-
+  @Input() isDashboard:Boolean=true;
   get starsArray(): number[] {
     return this.calification ? Array(this.calification).fill(0) : [];
   }
@@ -23,6 +23,7 @@ export class CardShopComponent implements OnInit {
   viewInfoCard() {
     if (this.infoCard && this.infoCard.seller && this.infoCard.seller.nickname) {
       // Redirige a /infoCardShop/nombreShop
+      
       this.router.navigate([`/infoCardShop/${this.infoCard.seller.nickname}`]);
     }
   }

@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardInfoPuntualComponent implements OnInit {
   @Input() parametroLabel!:String;
-  @Input() valorParametro!:number;
+  @Input() valorParametro!:number | String;
   constructor() { }
 
   ngOnInit(): void {

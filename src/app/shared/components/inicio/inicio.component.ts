@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../users/services/user.service';
 import { AllDataShops, ApiResponse } from '../../../users/models/user-info-model';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
@@ -10,31 +11,21 @@ export class InicioComponent implements OnInit {
   userData!: ApiResponse;
   shops!:AllDataShops;
   stars:number=0;
-  constructor(private userService: UserService) { }
+  user:string | null | undefined;
+  constructor(private userService: UserService,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // this.userService.getUserData().subscribe({ 
-    //   next: (data) => {
-    //     console.log(data);
-    //     this.userData = data;
-    //     var califications=this.userData.seller.seller_reputation.level_id;
-    //     var stars = this.extractNumber(califications);
-    //     console.log(stars);
-    //   },
-    //   error: (error) => {
-    //     console.error('Error fetching data', error);
-    //   }
-    // }
-    // );
-
+    this.route.paramMap.subscribe(params => {
+      if (params.get('user')) {
+        const user = params.get('user');
+        this.user = user;
+      }
+    });
+       
     this.userService.getAllUserDataShops().subscribe({ 
       next: (data) => {
         console.log(data);
         this.shops = data;
-        this.shops.dataShops.forEach(shop => {
-          var califications=shop.seller.seller_reputation.level_id;
-          
-        });
       },
       error: (error) => {
         console.error('Error fetching data', error);

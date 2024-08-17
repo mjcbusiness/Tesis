@@ -8,6 +8,7 @@ import { ApiResponse } from 'src/app/users/models/user-info-model';
 })
 export class TablaMetricaComponent implements OnInit {
   @Input() infoCard!:ApiResponse;
+  @Input() tablaMetricasData:any[]=[];
   cancelaciones:number=0;
   total:number=0;
   reclamos:number=0;

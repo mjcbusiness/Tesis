@@ -2,12 +2,11 @@
     width: 100%;
     margin: 0;
     background-color: rgb(18, 18, 18);
-    height: 92vh;
+    height: 150vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     color: white;
 }
-
 .content-page{
     width: 75%;
     display: flex;
@@ -36,7 +35,7 @@
 .info-card{
     width: 33%;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     background-color: rgb(18, 18, 18);
 }
 .tabla-metrica{
@@ -50,16 +49,18 @@
     display: flex;
     justify-content: flex-start;
     padding-left: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 .card-metricas{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 50px;
 }
-.card-metrica{
-    padding-right: 40px;
-    background-color: rgb(18, 18, 18);
+
+.tabla-publicidad{
+    padding-left: 30px;
+    padding-bottom: 30px;
 }

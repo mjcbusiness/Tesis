@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tabla-publicidad',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaPublicidadComponent implements OnInit {
 
+  @Input() tablaPublicidadData:any[]=[];
   constructor() { }
 
   ngOnInit(): void {

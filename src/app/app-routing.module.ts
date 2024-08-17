@@ -7,7 +7,7 @@ import { DashboardComponent } from './shared/components/dashboard/dashboard.comp
 const routes: Routes = [
   { path: 'login', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'inicio', component: InicioComponent },
+  { path: 'inicio/:user', component: InicioComponent },
   {path:'infoCardShop/:shopName', component:DashboardComponent},
   {path:'**', redirectTo: 'login'}
   

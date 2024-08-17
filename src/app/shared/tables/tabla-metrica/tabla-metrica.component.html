@@ -9,33 +9,12 @@
       </tr>
     </thead>
     <tbody class="custom-body">
-      <tr>
-        <td class="first-column">Cancelaciones</td>
-        <td>{{numeroCancelaciones()}}</td>
-        <td>{{porcentajeCancelaciones()}}%</td>
-        <td>Media</td>
-        <td>Excelente</td>
-      </tr>
-      <tr>
-        <td class="first-column">Tiempos de entrega</td>
-        <td>1</td>
-        <td>0,00%</td>
-        <td>Media</td>
-        <td>Excelente</td>
-      </tr>
-      <tr>
-        <td class="first-column">Mediaciones</td>
-        <td>2</td>
-        <td>0,00%</td>
-        <td>Media</td>
-        <td>Excelente</td>
-      </tr>
-      <tr>
-        <td class="first-column">Reclamos</td>
-        <td>{{numeroReclamos()}}</td>
-        <td>{{porcentajeReclamos()}}%</td>
-        <td>Media</td>
-        <td>Excelente</td>
+      <tr *ngFor="let item of tablaMetricasData">
+        <td class="first-column">{{item.Indicadores}}</td>
+        <td>{{item.Cantidad}}</td>
+        <td>{{item.Porcentaje}} %</td>
+        <td>{{item.MaxPermitido}}</td>
+        <td>{{item.Estado}}</td>
       </tr>
     </tbody>
   </table>

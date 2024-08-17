@@ -1,22 +1,28 @@
-<canvas baseChart
-        [data]="barChartData"
-        [options]="barChartOptions"
-        [plugins]="barChartPlugins"
-        [legend]="barChartLegend"
-        [type]="'bar'">
-</canvas>
-<!-- <canvas baseChart
-        [labels]="doughnutChartLabels"
-        [datasets]="doughnutChartDatasets"
-        [options]="doughnutChartOptions"
-        [legend]="true"
-        [type]="'doughnut'">
-</canvas>
-<div style="display: block;">
-        <canvas baseChart width="400" height="400"
-          [type]="'line'"
-          [data]="lineChartData"
-          [options]="lineChartOptions"
-          [legend]="lineChartLegend">
-        </canvas>
-      </div> -->
+<div class="graficos">
+        <div class="dona-chart">
+                <canvas baseChart
+                        [labels]="doughnutChartLabels"
+                        [datasets]="doughnutChartDatasets"
+                        [options]="doughnutChartOptions"
+                        [legend]="true"
+                        [type]="'doughnut'">
+                </canvas>
+        </div>
+        <div class="linea-chart" style="display: block;">
+                <canvas baseChart width="400" height="400"
+                  [type]="'line'"
+                  [data]="lineChartData"
+                  [options]="lineChartOptions"
+                  [legend]="lineChartLegend">
+                </canvas>
+        </div>
+        <div class="barra-chart">
+                <canvas baseChart
+                        [data]="barChartData"
+                        [options]="barChartOptions"
+                        [plugins]="barChartPlugins"
+                        [legend]="barChartLegend"
+                        [type]="'bar'">
+                </canvas>
+        </div>
+</div>

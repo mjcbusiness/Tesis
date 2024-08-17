@@ -14,7 +14,7 @@ export class UserService {
     { nickNameShop: 'TECNOENLINEA.COM.AR' }
   ];
   private apiUrl = 'https://api.mercadolibre.com/sites/MLA/search?nickname=';
-  private token = 'APP_USR-714919120455516-073020-eaa4cee4e9221762399b3f1ac7ae270d-162555727';
+  private token = 'APP_USR-714919120455516-081714-d1ae369de73c37d85a1cc57f1dde0d98-162555727';
 
   constructor(private http: HttpClient) { }
 

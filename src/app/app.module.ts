@@ -20,6 +20,11 @@ import { AuthService } from './users/services/auth.service';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardInformacionComponent } from './shared/components/dashboard-informacion/dashboard-informacion.component';
+import { CardEventoComponent } from './shared/cards/card-evento/card-evento.component';
+import { ComunicacionService } from './shared/components/services/comunicacion.service';
+import { TablaSeguimientoComponent } from './shared/tables/tabla-seguimiento/tabla-seguimiento.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,10 @@ import { HttpClientModule } from '@angular/common/http';
     CardMetricasComponent,
     InicioComponent,
     DropdownComponent,
-    ButtonLogoComponent
+    ButtonLogoComponent,
+    DashboardInformacionComponent,
+    CardEventoComponent,
+    TablaSeguimientoComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,ComunicacionService,DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

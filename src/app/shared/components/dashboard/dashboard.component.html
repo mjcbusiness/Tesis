@@ -1,9 +1,11 @@
 <app-navbar></app-navbar>
+<app-card-shop [infoCard]="infoCard" [calification]="getCalification(infoCard.seller.seller_reputation.level_id)" style="width: 25%;position:fixed"></app-card-shop>
 <div class="dashboard">
-    <!-- <app-sidebar style="width: 25%;"></app-sidebar> -->
-    <app-card-shop [infoCard]="infoCard" [calification]="getCalification(infoCard.seller.seller_reputation.level_id)" style="width: 25%;"></app-card-shop>
     <div class="content-page">
         <div class="buttons">
+            <div class="button">
+                <app-button-main buttonText="Información"></app-button-main>
+            </div>
             <div class="button">
                 <app-button-main buttonText="Actualizar"></app-button-main>
             </div>
@@ -26,45 +28,33 @@
             </div>
         </div>
         <div class="tabla-metrica">
-            <app-tabla-metrica [infoCard]="infoCard"></app-tabla-metrica>
+            <app-tabla-metrica [infoCard]="infoCard"
+                               [tablaMetricasData]="tablaMetricasData">
+            </app-tabla-metrica>
         </div>
         <div class="label-metrica">
             <h5>Métricas</h5>
         </div>
+        <app-card-metricas [donoutChartValues]="donoutChartValues" 
+                           [linearChartValues]="linearChartValues"
+                           [barChartValues]="barChartValues">
+        </app-card-metricas>
+        <div class="label-metrica">
+            <h5>Publicidad</h5>
+        </div>
         <div class="card-metricas">
-            <app-card-metricas class="card-metrica"></app-card-metricas>
-            <app-card-metricas class="card-metrica"></app-card-metricas>
-            <app-card-metricas class="card-metrica"></app-card-metricas>
+            <div class="info-card" *ngFor="let item of publicidadCardsData">
+                <app-card-info-puntual [parametroLabel]="item.label"
+                                       [valorParametro]="item.Value">
+                </app-card-info-puntual>
+            </div>
+        </div>
+        <div class="label-metrica">
+            <h5>Publicidades</h5>
+        </div>
+        <div class="tabla-publicidad">
+            <app-tabla-publicidad [tablaPublicidadData]="tablaPublicidadData"></app-tabla-publicidad>
         </div>
     </div>
 </div>
-
-<!-- <div class="dashboard">
-    <h3>COMPONENTES</h3>
-    <br>
-    <h5>Boton</h5>
-    <app-button-main></app-button-main>
-    <br>
-    <br>
-    <h5>Tabla Metrica</h5>
-    <app-tabla-metrica></app-tabla-metrica>
-    <br>
-    <br>
-    <h5>Tabla publicidad</h5>
-    <app-tabla-publicidad></app-tabla-publicidad>
-    <br>
-    <br>
-    <h5>Card de Shop</h5>
-    <app-card-shop></app-card-shop>
-    <br>
-    <br>
-    <h5>Card Info Puntual</h5>
-    <app-card-info-puntual></app-card-info-puntual>
-    <br>
-    <br>
-    <h5>Card Metrica</h5>
-    <app-card-metricas></app-card-metricas>
-    <br>
-    <br>
-</div> -->
 

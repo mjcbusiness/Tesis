@@ -7,10 +7,5 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 })
 export class AppComponent {
   title = 'Tesis';
-  @ViewChild(SidebarComponent)
-  sidebar: SidebarComponent = new SidebarComponent;
-
-  handleSidebarToggle() {
-    this.sidebar.toggleSidebar();
-  }
+ 
 }
